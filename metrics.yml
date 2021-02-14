@@ -23,3 +23,21 @@ bytes_received:
   action: GetTotalBytesReceived
   param: NewTotalBytesReceived
   type: counter
+
+packets_sent:
+  service: WANCommonIFC1
+  action: GetTotalPacketsSent
+  param: NewTotalPacketsSent
+  type: counter
+
+packets_received:
+  service: WANCommonIFC1
+  action: GetTotalPacketsReceived
+  param: NewTotalPacketsReceived
+  type: counter
+
+uptime_in_seconds:
+  service: WANIPConn1
+  action: GetStatusInfo
+  param: NewUptime
+  type: counter
