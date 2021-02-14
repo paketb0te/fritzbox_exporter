@@ -1,0 +1,25 @@
+---
+
+upstream_bitrate:
+  service: WANCommonIFC1
+  action: GetCommonLinkProperties
+  param: NewLayer1UpstreamMaxBitRate
+  type: gauge
+
+downstream_bitrate:
+  service: WANCommonIFC1
+  action: GetCommonLinkProperties
+  param: NewLayer1DownstreamMaxBitRate
+  type: gauge
+
+bytes_sent:
+  service: WANCommonIFC1
+  action: GetTotalBytesSent
+  param: NewTotalBytesSent
+  type: counter
+
+bytes_received: 
+  service: WANCommonIFC1
+  action: GetTotalBytesReceived
+  param: NewTotalBytesReceived
+  type: counter
